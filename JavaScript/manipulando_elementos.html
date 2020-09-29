@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript</title>
+</head>
+<script>
+  
+function distribuiCaracter() {
+
+	//selecionar o valor digitado
+	var caracter = (document.getElementById('entrada').value)
+	
+	//limpa o campo de digitação:
+	document.getElementById('entrada').value = ''
+
+	caracter.trim()
+	//limar espacos em brancos nas exrtemidades da string
+	switch(caracter){
+		case '0':
+		case '1':
+		case '2':
+		case '3':
+		case '4':
+		case '5':
+		case '6':
+		case '7':
+		case '8':
+		case '9':
+		
+		//adicionar caracter referente a numeros
+		document.getElementById('apenas_numeros').value += caracter
+
+		break;
+		default:
+		//acidionar o caracter
+
+		document.getElementById('apenas_letras').value += caracter
+
+	}
+}
+
+</script>
+
+<body>
+	<input 
+		type="text" 
+		placeholder="Digite um caractere aqui" 
+		onkeyup="distribuiCaracter()"
+		name=""
+		id="entrada"
+	/>
+	
+
+	<hr />
+	<span>Letras:</span>
+	
+	<input type="text" disabled="disabled" id="apenas_letras" />
+
+
+	<span>Numeros:</span>
+	<input type="text" disabled="disabled" id="apenas_numeros" />
+
+
+
+</body>
+</html> 

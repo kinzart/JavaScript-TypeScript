@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            
+            align-content: center;
+            align-items: center;
+            position: center;
+            background-color: rgb(230, 230, 230);
+        }
+        #carro #rosa {
+            position:center;
+        }
+    </style>
+</head>
+<body>
+    <h1>AI VAMO TESTAR</h1>
+    <div id="carro"></div>
+    <div id="rosa" style="background-color: blueviolet; width: 100px; height: 100px;"></div>
+    
+    <form action="get" id="formulario">
+        <input type="text" name="name" placeholder="nome">
+        <input type="button" value="enviar" onclick="acao()">
+    </form>
+    <br>
+    <article id="artigo"><h3>ME REMOVA</h3></article>
+
+<script>
+    /*criando uma variavel | criando um elemento (paragrafo) 
+     variavel já com valor atribuido | implantaHTML = "string"
+      pegar tal id(no caso esta em uma div) | adiciona na div, o valor da variavel */
+    
+    var a = document.createElement("p")
+    a.innerHTML = "online"
+    document.getElementById("carro").appendChild(a);
+
+
+     /*criando uma variavel | criando um elemento (h1) */
+      /* variavel já com valor atribuido | implantaHTML = "numero" */
+      /* pegar tal id(no caso esta em uma div) | adiciona na div, o valor da variavel*/
+    let b = document.createElement("h1")
+    b.innerHTML = 3
+    document.getElementById("carro").appendChild(b);
+
+   
+    const c = document.createElement("p")
+    c.innerHTML = ["lista", "lista2", 3, 4, a, ]
+    document.getElementById("artigo").appendChild(c);
+    
+    
+   /*Para remover é mais simples*/
+   document.getElementById("rosa").remove();
+
+
+   /*Para remover elemento appendChild*/
+   document.getElementById("artigo").removeChild(c)
+
+
+    
+</script>
+
+</body>
+</html>

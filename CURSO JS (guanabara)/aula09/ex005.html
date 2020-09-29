@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+   <style>
+       body {
+        background: rgb(243, 143, 143);
+        font: normal 18pt; 
+       }
+
+   </style>
+</head>
+<body>
+   <h1>Iniciando os estudos DOM</h1>
+   <p>Aqui vai o resultado</p>
+   <p>Aprendendo a usar o Dom</p>
+   <div>Clique em min</div>
+
+   <div style="color: yellowgreen;"><button id="botao" style="color:yellow; width: 70px; height: 30px;"></button></div>
+
+
+   <script>
+       var corpo = document.body
+       var p1 = document.getElementsByTagName('p')[0]
+       alert('Está escrito assim: ' + p1.innerText)
+       p1.style.color = 'white'
+       corpo.style.color = 'white'
+   </script>
+</body>
+</html>
