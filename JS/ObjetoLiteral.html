@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+	<title></title>
+</head>
+<body>
+	<h1>Acesso de metodos</h1>
+
+	<script type="text/javascript">
+
+
+
+		
+
+			 
+
+		var servico = {
+				cliente:'Rodolfo',
+				valor:20,
+				status:false,
+				iniciarServico:function(){
+				this.status = true; }
+				};
+				console.log(servico.status); //vai imprimir false
+				servico.iniciarServico(); //método que muda o status do serviço
+				console.log(servico.status); //vai imprimir true
+
+				var sistema = {
+				nome: 'Sistema de vendas',
+				autor: 'José',
+				versao: 1.0,
+				exibirInformacoes: function(){
+				console.log(this.nome + " criado por " + this.autor);
+				},
+				exibirVersao: function(){
+				console.log(this.versao);
+				},
+				alterarVersao: function(novaVersao){
+				this.versao = novaVersao;
+				}
+				};
+				sistema.exibirInformacoes();
+				// vai imprimir "Sistema de vendas criado por José" 
+
+
+
+
+				/*Usar ou não objetos literais vai depender de como será o seu código. e precisar reaproveitar a mesma estrutura utilize uma função construtora, se não utilize objetos literais. */
+				
+
+
+				/*let pessoas = {
+					 nome : 'joao',
+					 sobrenome : 'assis',
+					 falar : function() {
+					   return "Meu nome é " + this.nome + " " + this.sobrenome;
+					 }*/
+
+	</script>
+
+</body>
+</html>

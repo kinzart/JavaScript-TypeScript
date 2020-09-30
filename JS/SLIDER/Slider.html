@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>SLIDER</title>
+
+	<meta charset="utf-8">
+
+
+	<style type="text/css">
+
+		* { margin: 0; padding: 0; }
+
+
+		.slider label {
+			background-color: white;
+			bottom: 10px;
+			cursor: pointer;
+			display: block;
+			height: 12px;
+			position: absolute;
+			width: 12px;
+			border-radius: 10px;
+			z-index: 10;
+			font-size: 10px;
+			color: red;
+			text-align: center;
+
+}
+
+.slider img {
+	opacity: 0;
+	visibility: hidden;
+
+}
+.slider li input:checked ~ img {
+	opacity: 1;
+	visibility: visible;
+	z-index: 10;
+}
+
+
+ .slider {
+  display: block;
+    height: 293px;
+   width: 600px;
+   margin: auto;
+  margin-top: 20px;
+   position: relative;
+}
+
+ .slider li {
+     list-style: none;
+     position: absolute;
+ }
+
+ .slider img {
+     margin: auto;
+     height: 100%;
+    width: 100%;
+     vertical-align: top;
+ }
+
+.slider input {
+    display: none;
+}
+
+.slider li:nth-child(1) label {
+	left: 10px; }
+
+
+.slider li:nth-child(2) label {
+	left: 40px; }
+
+	.slider li:nth-child(3) label {
+		left: 70px;
+
+	</style>
+</head>
+<body>
+	<ul class="slider">
+    <li>
+    	 <input type="radio" id="slide1" name="slide" checked>
+         <label for="slide1">1</label>
+         <img src="images/1.jpg" />
+  </li>
+    <li>
+    		<input type="radio" id="slide2" name="slide">
+  	        <label for="slide2">2</label>
+            <img src="images/2.jpg" />
+    </li>
+    <li>
+    	<input type="radio" id="slide3" name="slide">
+    	 <label for="slide3">3</label>
+          <img src="images/3.jpg" />
+     </li>
+</ul>
+
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>visibility displaty</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		
+		blockquote {
+
+		    min-width: 400px;
+    max-width: 1200px;
+    width: 800px;
+    height: 100px;
+    min-height: 100px;
+    max-height: 200px;
+    overflow: scroll;
+    font-size: 40px;
+
+		}
+
+		h1 {
+			visibility:visible;
+			background: blue;
+			width: 200px;
+			height: 50px;
+		}
+
+		.volta {
+			visibility: visible;
+		}
+
+
+
+	</style>
+</head>
+<body>
+
+	<header>
+		<h1 id="esconde">Visibility dsiplay</h1>
+	</header>
+
+
+	<button onclick="acao()">troca texto</button>
+	<button onmouseover="acao2()">Remove passando o mouse</button>
+
+	<h3>As paradas vao se ajustar conforme</h3>
+
+	<blockquote id="p1">jjjjjjjjjjjjjjjjjjjjjjjjj
+	jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj
+	jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj
+	jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj
+	jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj
+	jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj
+	jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj
+	jjjjjjjjjjjjjjjjjjjjj</blockquote>
+	<button onclick="document.getElementById('p1').style.visibility='hidden'">Esconder</button>
+	<button onclick="document.getElementById('p1').style.visibility='visible'">Ver</button>
+
+	<p>yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy
+	yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy
+	yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy
+	yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy</p>
+	<div><button onclick="on()"></button></div>
+
+
+	<script type="text/javascript">
+		function on() {
+		document.write("<h2>Learning about the HTML DOM is fun!</h2>");
+  		document.close();}
+
+
+			//Trocando o elemento
+			function acao() {
+				let volta = document.getElementById('esconde')
+				volta.innerHTML= 'OBA'
+				// body...
+
+
+			}
+
+
+			// remove
+			function acao2() {
+				let tira = document.getElementById('esconde')
+				tira.remove()
+				tira.innerHTML= 'Voltei'
+			}
+
+
+	</script>
+
+</body>
+</html>

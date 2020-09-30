@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>funcao dentro de funcao</title>
+	<style type="text/css">
+		
+		div{
+			background-color: blue;
+			width: 200px;
+			height: 200px;
+			text-align: center;
+			padding: 20px;
+			position: absolute;
+
+		}
+	</style>
+</head>
+<body>
+
+<div id="1" onmouseenter="enter()" onmouseleave="exit()"></div>
+
+
+
+<script type="text/javascript">
+	function enter(div) {
+	 
+	let data = new Date
+	let hora = data.getHours()
+	let min = data.getMinutes()
+
+
+	let horario = `<h1>${hora} : ${min}</h1>`	
+
+
+
+	 var div = document.getElementById('1')
+	 div.innerHTML=horario
+	 div.style.backgroundColor = "blue"
+	 div.style.right = "100px"
+	 
+	}
+
+
+
+	function exit(s){
+
+		var horario = `<h1>Hora Atual</h1>`
+		var s = document.getElementById('1')
+		s.style.borderRadius = "50%"
+		s.innerHTML=horario
+		s.style.backgroundColor = "red"
+		s.style.left = "100px"
+	}
+
+</script>
+
+
+
+
+</body>
+</html>
